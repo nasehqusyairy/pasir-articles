@@ -185,7 +185,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <aside className="border-t border-t-highlight pt-5 lg:border-l lg:border-t-border lg:pl-6 lg:pt-0">
+          <aside className="border-t border-t-highlight pt-5 lg:border-l lg:border-t-border lg:pl-6">
             <h2 className="border-b-2 border-b-highlight pb-3 text-xs font-bold tracking-widest">
               YANG BANYAK DIBACA
             </h2>

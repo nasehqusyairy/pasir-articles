@@ -17,11 +17,11 @@ export function SiteHeader() {
       </div>
       <header className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
         <Button variant="outline" size="icon" className="md:hidden" aria-label="Buka menu" onClick={() => setMenuOpen(!menuOpen)}><RiMenuLine /></Button>
-        <Link to="/" className="brand block text-center no-underline" aria-label="Pasir beranda"><span className="block font-heading text-5xl font-black leading-none tracking-[-.09em]">pasir<span className="text-primary">.</span></span><span className="text-[9px] font-bold tracking-[.16em] text-muted-foreground">BERANI BICARA FAKTA</span></Link>
+        <Link to="/" className="brand block text-center no-underline" aria-label="Pasir beranda"><span className="block font-heading text-5xl font-black leading-none tracking-[-.09em]">pasir<span className="text-highlight">.</span></span><span className="text-[9px] font-bold tracking-[.16em] text-muted-foreground">BERANI BICARA FAKTA</span></Link>
         <div className="flex items-center gap-2 sm:gap-4"><span className="hidden text-[10px] tracking-widest text-muted-foreground lg:block">EDISI INDONESIA</span><Button variant="outline" size="icon" aria-label="Cari berita" onClick={() => setSearchOpen(!searchOpen)}><RiSearchLine /></Button><Link to="/#newsletter" className="hidden h-8 items-center bg-primary px-3 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/80 sm:inline-flex">IKUTI PASIR →</Link></div>
       </header>
       {searchOpen && <Form action="/search" method="get" className="mx-auto flex max-w-7xl items-center gap-2 border-t px-4 py-3 sm:px-6"><RiSearchLine className="size-4 text-muted-foreground" /><Input name="query" placeholder="Cari berita, topik, atau tokoh…" aria-label="Cari berita" autoFocus /><Button type="submit">Cari</Button></Form>}
-      <nav aria-label="Navigasi utama" className="border-y"><div className={cn("mx-auto max-w-7xl flex-wrap items-center gap-x-7 px-4 sm:px-6", menuOpen ? "flex py-2" : "hidden md:flex")}>
+      <nav aria-label="Navigasi utama" className="border-y border-b-2 border-b-highlight"><div className={cn("mx-auto max-w-7xl flex-wrap items-center gap-x-7 px-4 sm:px-6", menuOpen ? "flex py-2" : "hidden md:flex")}>
         {sections.map((section) => <Link key={section} to={`/search?query=${encodeURIComponent(section)}`} onClick={() => setMenuOpen(false)} className="flex min-h-11 items-center text-[10px] font-bold uppercase tracking-[.08em] text-foreground/80 no-underline hover:text-primary">{section}</Link>)}
       </div></nav>
     </>

@@ -238,10 +238,6 @@ export default function Home() {
       </div>
       <footer className="bg-foreground text-background">
         <div className="mx-auto flex min-h-20 max-w-7xl items-center gap-4 px-4 sm:px-6">
-          <span className="font-heading text-3xl font-black">
-            pasir<span className="text-highlight">.</span>
-          </span>
-          <span className="text-sm text-background/70">Berani Bicara Fakta</span>
           <span className="ml-auto text-[10px] tracking-widest text-background/60">
             © 2026 PASIR MEDIA
           </span>
